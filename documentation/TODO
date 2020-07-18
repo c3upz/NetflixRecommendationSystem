@@ -1,0 +1,28 @@
+
+Unordered-Todo:
+☐ I will want to create a way for me to test different algorithms easily
+  ☐ Can use a global varible and have a an array of objects, which will represent different recommendation methods, with cooresponding values (ie. 1,2,3,4)
+    * This way I will easily be able to switch which 'recommondation method' (ie. k-nearest neighbors) I am using to generate predicted ratings
+
+
+
+
+Ordered-Todo:
+✔ Set up enviroment @started(20-05-25 16:32) @done(20-05-25 19:30) @lasted(2h58m14s)
+✔ Write list of steps to fufill the requirements for the first submission date @started(20-05-25 19:32) @done(20-05-26 01:00) @lasted(5h28m30s)
+☐ TO START and SUBMIT ONTIME: I could randomly generate ratings for each movie
+☐ Query data
+  ☐ Importing the data from the files into variables. This will need to be done for both the AU's and the NU's.
+☐ Filter data to find potential NUs 
+  ☐ NUs must have more than 1 rating in common with AU
+  ☐ NUs must have rated the specific movie we are predicting a rating for
+  * we will need to filer the data..
+  * should i refilter training data for each item?
+    * I could or I could FIRST filter out all users in training data that dont have more than 1 rating in common with the user. 
+      !(I would use this first subset created for all of the movies that a particular AU needs predictions for)
+    * THEN have a SECONDARY filtering phase where I would filter out users from the subset (created through first filtering) that have not rated the document in question. (ie. filter out users with 0s in specified matrix location)
+      !(this second subset would have to be recreated for each movie)
+    * And then use that double-filtered subset of the training data to pick NUs from.
+    ANSWER: the above way is probably better... that way I do not have to filter through whole training data set for each rating I want to predict 
+  
+☐ 

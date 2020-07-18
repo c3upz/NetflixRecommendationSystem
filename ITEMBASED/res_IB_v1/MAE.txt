@@ -1,0 +1,6 @@
+MAE of GIVEN 5 : 0.875703388770789
+MAE of GIVEN 10 : 0.802333333333333
+MAE of GIVEN 20 : 0.800906723256487
+OVERALL MAE : 0.825808570021343 
+
+Note: this was first imple. of item based filtering w/out any add ons (IUF, caseAMP) used 3 as average rating when a rating could not be predicted

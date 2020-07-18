@@ -1,0 +1,22 @@
+want to find items that are similar to item i
+
+for active item (rating = 0)
+  we need to find the similarity between that active item and all other items rated by the same user
+
+  todo this we need to find all users that have rated active item and particular rated item
+
+  each movie needs more than one user who has rating in common, 
+
+  find all users who have specified more than 1 rating for item i
+
+  -> user 201 and first unknown rating...
+  find sim between 201 rated items(item# 201, 206, 209, 308, 508) and first unknown item (eg item#235)
+
+      item# 201 206 209 208 308 508 235
+  user#      
+  201       2   3   5   8    9   8   ?
+  202       1   4   2   5    3   3   7
+  203       6   3   5   2    9   3   0
+  204       5   2   4   3    6   2   4
+
+  

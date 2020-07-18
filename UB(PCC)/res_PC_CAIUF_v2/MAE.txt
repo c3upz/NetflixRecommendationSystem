@@ -1,0 +1,6 @@
+MAE of GIVEN 5 : 0.892584719269726
+MAE of GIVEN 10 : 0.8395
+MAE of GIVEN 20 : 0.793865149030578
+OVERALL MAE : 0.837506156624528
+
+NOTE: did not change anything based the test file I was using

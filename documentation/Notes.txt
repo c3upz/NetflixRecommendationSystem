@@ -1,0 +1,76 @@
+PIN: 7033067481615228
+Where did I leave off?
+  Okay... I was able to format the document correctly. However, I did not implement Cosine Similarly or Weighted Average. All i did was simply import the data, pass that data to a function that created a 'dictionary' for the data, but the dictionary only included lines of the test#.txt were the rating was 0. This is were I messed up and lost a bunch of time. I may not fully understand what a dictionary is, or I was just being really dumb. Regardless, I then changed the values of the 0s (ratings) to a random number between 1 and 5. After I changed the zeros I just stored the " user# item# rating# " in a string, and stored that string in an array of strings. After this it was very simple I just needed to print each element of the array (string) onto the output document then I was done.
+
+  Reflection: I thought I was doing really well... and I think i was all the way up until I messed up when trying to convert the zeros to random numbers... I think i was just indexing the dictionary wrong / I did not how to iterate through it like I wanted too.... this caused a bunch of lost time! I hope the teacher gives me credit for the assignment bc I changed my time zone to make it earlier than 12am. 
+    In the future I think I probably should have just tried to implement the Cosine Similarity and Weighted average.. I thought replacing zeros would be much faster (which would have been good cuz I wanted to study for computer networking) but unfortunately I think it probably took a similar amount of time because of my confusion / mess up.
+
+  NEXT TIME: the first thing I should do is implement Cosine Similarity and Weighted Average... and submit files too make sure I did it correctly. If I implement CosSim and Weighted Average correctly my MAE should be ~0.8
+
+  Oh just BTW I am the LOWEST IN THE CLASS .... WORK FUCKING HARD I HATE LOSING
+
+
+
+
+
+Important things to remember when implementing recommended system.....
+
+Files: 
+  - test5.txt: this file contains users 201-300. Each user has 5 known move-ratings and a handful of unknown movie-ratings that we are are suppose to predict
+  - test10.txt: this file contains users 301-400. Each user has 10 known move-ratings and a handful of unknown movie-ratings that we are are suppose to predict
+  - test20.txt: this file contains users 401-500. Each user has 10 known move-ratings and a handful of unknown movie-ratings that we are are suppose to predict
+  !IMP: the predicted rating for the users should get more accurate as the amount of known movie-ratings for the active users increases  
+
+  - train.txt: contains a 200 x 1000 matrix. The test data has 200 users (rows) and 1000 columns (movies) although when I look at the data it does not look like the test data has that many movies. The ratings are on a 1-5 scale. A 0 indicates a user that has not yet rated that particular movie
+    - We will be using the data in train.txt to create our Neighborhood(group of similar users). This Neighborhood will be then be used to predict the active users rating for a movie that they have not 'watched'/'rated' (active-users = users in test5, test10, test20).
+    - !NOTE: the first column are not numbers that represent a particular user. Similarly, the values in the first row are not numbers that represent a particular movie.  
+
+** For the first implementation we will be using the "K-nearest neighbors" method (User filtering (Neighbor Selection) & Rating prediction (Weighted Average))
+!IMP: remember to keep 'K' large during this process... larger K usually (probably always means better results) 
+Neighbor Selection process
+  - Neighbors will need to fit the following requirements: 
+    1. NU (neighbor user) must have more than one rating in common with the AU (active user)
+      * if the AU does not have more than one rating in common with the NU then the CosSim will always equal 1.. bc single dimension vectors have not angle between them
+    2. NU must have rated the item we are trying to predict the rating for 
+      * (ie. it testing movie5, all NU must have a non-zero value in the matrix at column number that corresponds to movie5)
+
+Filter process
+-Each time calc for new user (lets say AU1).. filter out NUs that only have one rating in common with AU1
+
+-For each movie needing a rating for AU1.. filter out all NUs that have not rated that movie
+  
+  !by filtering in the following way all neighbors should fit the requirements
+
+Rating prediction process
+  - This process should be done after we have created our Neighborhood!
+  - We will then calculate the waited average of the NU's rating
+    - The result of of the calculation will be our result / predicted rating for an AU
+      
+!!!!!!!!!!!!!!!!!LEFT OFF HERE LAST NIGHT
+I can calculate CosSim the first time the program goes through 'calcSimilarity'->'filterUnrelatedUsers'.. however, the second time it goes through I get an error... I think I know why I am getting this error. After the first run through... the array 'training_users' is getting modified and so the second time it is called (bc i am looping) it only registers 21 test users instead of 200. The 21 users comes from the first iteration when I filtered out training users for AU1(201)....
+
+This was because I was being super dumb.... when you do var1 = var2.. var1 just becomes another way to reference the contents of var2.. therefore if I modify var1 then the contents of var2 will also be modified
+
+AFTER implementing required algorithms here are some notes of possible things I can do to tweak them....
+ - If the movies are sorted by genre (they probably are not) 
+	 - I could group the 0s and find similarity in grouped 0s between the active users and a test user / normal user
+ - Otherwise... (if movies are not sorted) 
+	 - You could count the number of 0s in common between the active user and the normal user 
+	 - Normal users that have more 0s in common with the active user should be given additional weight....
+
+
+
+
+
+In the case of 0 possible users to base the rating off of.... what should I do?
+  - I could give it a default rating??????
+  - in my next iteration of the program I could find neighbors based on different criteria
+
+
+
+
+Thursday
+* pearsons correlation
+
+
+  "As I suggested, you can first work on the basic user-based CF with cosine similarity, since the other algorithms are based on this one. There are some special cases that you need to deal with such as no neighbors to be found, some movies having no ratings, etc. You can handle those cases in a simple way, for example, just using the average of the ratings of the test user (or test movie) for prediction. One effective way to debug your program is to take one test user and manually calculate the predicted rating and see if the intermediate results match those from your program. "

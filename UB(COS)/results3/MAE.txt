@@ -1,0 +1,6 @@
+!NOTE this was using basic user based CF w/ no IDF or Case Amp
+
+MAE of GIVEN 5 : 0.880330123796424
+MAE of GIVEN 10 : 0.8025
+MAE of GIVEN 20 : 0.771872287064725
+OVERALL MAE : 0.815013955015597 

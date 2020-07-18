@@ -1,0 +1,16 @@
+MAE of GIVEN 5 : 0.788170563961486
+MAE of GIVEN 10 : 0.740833333333333
+MAE of GIVEN 20 : 0.733095398861773
+OVERALL MAE : 0.753078312263996 
+
+added pearsons ratings
+pc + ib + bcf w/ ratings weighted like so (pc*1), (bcf*1.5), (ib*1.2)
+
+I also made it so that discounted sim only worked on test5
+
+
+
+here test5 got worse test10 got better and test20 got better
+
+
+change weights and change discounted sim numbers

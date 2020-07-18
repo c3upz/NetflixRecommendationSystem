@@ -1,0 +1,11 @@
+MAE of GIVEN 5 : 0.787045141928223
+MAE of GIVEN 10 : 0.747166666666667
+MAE of GIVEN 20 : 0.735121057200733
+OVERALL MAE : 0.755130520439993 
+
+
+same as combo v1 but w/ discounted sim
+
+so ... only should use discounted w/ 5 at the current values of beta 
+
+    beta: test5 = 3, test10 = 5, test20 = 7

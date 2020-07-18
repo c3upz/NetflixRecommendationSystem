@@ -1,0 +1,6 @@
+MAE of GIVEN 5 : 0.876328623233713
+MAE of GIVEN 10 : 0.801666666666667
+MAE of GIVEN 20 : 0.801292562940098
+OVERALL MAE : 0.826013790838943 
+
+vanilla MAE but w/ expanded userbase but used item average rating instead of 3

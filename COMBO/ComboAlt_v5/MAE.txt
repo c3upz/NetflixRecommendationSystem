@@ -1,0 +1,7 @@
+MAE of GIVEN 5 : 0.784419157183944 ->only 5 went down
+MAE of GIVEN 10 : 0.738833333333333
+MAE of GIVEN 20 : 0.731359120285521
+OVERALL MAE : 0.750615662452799 
+
+
+changed weights of each alg again

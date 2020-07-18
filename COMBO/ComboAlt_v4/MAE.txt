@@ -1,0 +1,10 @@
+MAE of GIVEN 5 : 0.786294860572715
+MAE of GIVEN 10 : 0.737166666666667
+MAE of GIVEN 20 : 0.729237002025658
+OVERALL MAE : 0.74991791167296 
+
+
+
+changed weights from v3
+
+added different weights for each alg based on file (eg test5, test10, test20)

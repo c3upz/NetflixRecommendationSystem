@@ -1,0 +1,10 @@
+MAE of GIVEN 5 : 0.78829561085407
+MAE of GIVEN 10 : 0.744833333333333
+MAE of GIVEN 20 : 0.733384778624481
+OVERALL MAE : 0.754227548842555 
+
+!note i do have wrong file names... dont worry these are for combo
+
+BCF (w/ Extra data, iuf, case amp ) and IB (w/ case amp and extra data)
+
+IB putting 3 as value instead of avg rating of item when there are no similarities

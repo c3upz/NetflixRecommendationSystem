@@ -1,0 +1,20 @@
+for each user 201-300
+
+  for each unknownrating
+    filter training users
+    calc rating based on new list
+    add rating to predicted rating list for user(k)
+  add list to final predicted rating list
+
+
+
+final predicted rating list = {201:[(1, 4), (111,3)], 202:}
+
+
+return final predicted rating list
+
+
+print(key rlist[0], rlist[1])
+
+    
+

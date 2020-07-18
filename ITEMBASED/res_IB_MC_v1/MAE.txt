@@ -1,0 +1,7 @@
+MAE of GIVEN 5 : 0.986619982493435
+MAE of GIVEN 10 : 0.8905
+MAE of GIVEN 20 : 0.94173820777467
+OVERALL MAE : 0.943851584304712 
+
+mean centering w/ extra data.
+mean centering subtracted 2.5 from each rating instead of items average
